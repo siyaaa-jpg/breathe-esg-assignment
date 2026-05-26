@@ -1,0 +1,35 @@
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/.pytest_cache/
+**/.coverage
+
+# Django
+**/db.sqlite3
+**/staticfiles/
+**/media/
+
+# Node
+**/node_modules/
+**/dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Git
+.git/
+.gitignore
+
+# Local env
+.env
+.env.local
+**/*.log
+
+# Local tooling memory (not deploy-relevant)
+memory/

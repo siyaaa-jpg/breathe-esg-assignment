@@ -1,0 +1,8 @@
+account_number,meter_id,service_address,billing_period_start,billing_period_end,total_kwh,unit,tariff_class,total_cost,currency
+ACC-10293,M-001,Frankfurt Plant 3,2025-07-28,2025-08-27,142500.00,kWh,Industrial-A,18525.00,EUR
+ACC-10293,M-002,Frankfurt Plant 3,2025-07-28,2025-08-27,2.85,MWh,Industrial-A,371.05,EUR
+ACC-10293,M-003,Munich Office,2025-07-28,2025-08-27,8420.50,kWh,Commercial-B,1095.00,EUR
+ACC-10294,M-009,Unknown Site,2025-08-01,2025-08-31,5000,kWh,Commercial-B,650,EUR
+ACC-10293,M-004,Frankfurt Plant 3,2025-08-01,2025-08-31,9999.99,therms,Industrial-A,1300,EUR
+ACC-10293,M-005,Frankfurt Plant 3,2025-09-30,2025-09-01,500,kWh,Commercial-B,65,EUR
+ACC-10293,M-006,Frankfurt Plant 3,2025-08-01,2025-08-31,-50,kWh,Commercial-B,0,EUR

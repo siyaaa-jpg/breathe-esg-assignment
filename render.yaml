@@ -1,0 +1,32 @@
+# Render's Infrastructure-as-Code spec. Push this repo + connect it on Render
+# and the service + database get created automatically.
+#
+# Free tier notes:
+# - Web service sleeps after ~15 min of inactivity; first request after sleep
+#   takes 20-40s while the container starts.
+# - Postgres free instance is deleted after 90 days. For long-lived demos,
+#   upgrade or move to a paid plan.
+services:
+  - type: web
+    name: breathe-esg-prototype
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health/
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: config.settings.prod
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DJANGO_ALLOWED_HOSTS
+        value: .onrender.com
+      - key: DATABASE_URL
+        fromDatabase:
+          name: breathe-esg-db
+          property: connectionString
+
+databases:
+  - name: breathe-esg-db
+    plan: free
+    databaseName: breathe
+    user: breathe

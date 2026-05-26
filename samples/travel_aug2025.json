@@ -1,0 +1,65 @@
+{
+  "report_id": "ER-2025-08-001",
+  "employee_email": "j.doe@example.com",
+  "submitted_at": "2025-08-30T14:23:00Z",
+  "items": [
+    {
+      "type": "flight",
+      "transaction_date": "2025-08-15",
+      "origin_iata": "FRA",
+      "destination_iata": "JFK",
+      "cabin_class": "economy",
+      "ticket_number": "T-ER-001-01",
+      "amount": 1245.00,
+      "currency": "EUR"
+    },
+    {
+      "type": "flight",
+      "transaction_date": "2025-08-20",
+      "origin_iata": "JFK",
+      "destination_iata": "FRA",
+      "cabin_class": "business",
+      "ticket_number": "T-ER-001-02",
+      "amount": 4250.00,
+      "currency": "USD"
+    },
+    {
+      "type": "hotel",
+      "transaction_date": "2025-08-15",
+      "nights": 5,
+      "city": "New York",
+      "country": "US",
+      "ref": "H-001",
+      "amount": 1800.00,
+      "currency": "USD"
+    },
+    {
+      "type": "ground",
+      "transaction_date": "2025-08-15",
+      "category": "taxi",
+      "distance_km": 18.5,
+      "ref": "G-001",
+      "amount": 45.00,
+      "currency": "USD"
+    },
+    {
+      "type": "ground",
+      "transaction_date": "2025-08-19",
+      "category": "rental",
+      "distance_km": 220.0,
+      "ref": "G-002",
+      "amount": 180.00,
+      "currency": "USD"
+    },
+    {
+      "type": "flight",
+      "transaction_date": "2025-08-22",
+      "origin_iata": "XYZ",
+      "destination_iata": "JFK",
+      "cabin_class": "economy",
+      "ticket_number": "T-ER-001-03",
+      "amount": 800.00,
+      "currency": "USD"
+    }
+  ]
+}
