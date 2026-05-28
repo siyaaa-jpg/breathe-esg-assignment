@@ -1,6 +1,10 @@
 // App shell: sidebar nav + main content. Loads current user once.
 
 import { useEffect, useState } from 'react'
+
+function getCsrfToken(): string {
+  return document.cookie.split('; ').find(r => r.startsWith('csrftoken='))?.split('=')[1] ?? ''
+}
 import { NavLink, Outlet } from 'react-router-dom'
 import { api } from '../api'
 import type { CurrentUser } from '../types'
@@ -34,7 +38,12 @@ export function Layout() {
               <div className="name">{user.email}</div>
               <div>{user.organization.name}</div>
               <div style={{ marginTop: 8 }}>
-                <a href="/admin/logout/?next=/">Log out</a>
+                <form method="post" action="/admin/logout/" style={{ display: 'inline' }}>
+                  <input type="hidden" name="csrfmiddlewaretoken" value={getCsrfToken()} />
+                  <button type="submit" style={{ background: 'none', border: 'none', padding: 0, color: 'inherit', cursor: 'pointer', textDecoration: 'underline', fontSize: 'inherit' }}>
+                    Log out
+                  </button>
+                </form>
               </div>
             </>
           ) : loadError ? (
