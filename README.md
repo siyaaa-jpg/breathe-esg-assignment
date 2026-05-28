@@ -27,7 +27,7 @@ Deployed to Render as a single Docker service (Django + built React) with a
 managed Postgres database. See `Dockerfile` and `render.yaml` at the repo
 root.
 
-**Live URL**: _[fill in after first deploy]_
+**Live URL**: https://breathe-esg-prototype-uqjy.onrender.com
 
 **Demo login**: `admin@demo.test` / `demo12345` (seeded by the
 `seed_demo_org` management command on first boot).
